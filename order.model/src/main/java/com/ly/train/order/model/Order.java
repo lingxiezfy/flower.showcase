@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 public class Order implements Serializable {
 
@@ -109,6 +109,5 @@ public class Order implements Serializable {
   public String toString() {
     return ToStringBuilder.reflectionToString(this);
   }
-
 
 }

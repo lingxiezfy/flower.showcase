@@ -26,7 +26,7 @@ import com.ly.train.order.model.Order;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 @FlowerService
 public class CreateOrderService implements Service<Order, Boolean> {

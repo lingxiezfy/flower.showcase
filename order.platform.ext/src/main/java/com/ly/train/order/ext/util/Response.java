@@ -20,7 +20,7 @@ package com.ly.train.order.ext.util;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 public class Response<T> {
 
@@ -30,8 +30,7 @@ public class Response<T> {
 
   private T data;
 
-  public Response() {
-  }
+  public Response() {}
 
   public Response(int code, String msg) {
     this.code = code;
@@ -78,7 +77,5 @@ public class Response<T> {
     builder.append("]");
     return builder.toString();
   }
-
-
 
 }

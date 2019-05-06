@@ -20,11 +20,11 @@ import org.slf4j.LoggerFactory;
 import com.ly.train.flower.common.annotation.FlowerService;
 import com.ly.train.flower.common.service.container.ServiceContext;
 import com.ly.train.flower.common.service.impl.AbstractService;
-import com.ly.train.order.model.OrderExt;
+import com.ly.train.order.ext.model.OrderExt;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 @FlowerService
 public class StartService extends AbstractService<OrderExt, OrderExt> {
@@ -33,11 +33,6 @@ public class StartService extends AbstractService<OrderExt, OrderExt> {
   @Override
   public OrderExt doProcess(OrderExt message, ServiceContext context) {
     return message;
-  }
-
-  @Override
-  public void onError(Throwable throwable, OrderExt orderExt) {
-    super.onError(throwable, orderExt);
   }
 
 }

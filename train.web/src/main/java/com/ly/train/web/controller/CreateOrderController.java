@@ -24,13 +24,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.ly.train.flower.common.annotation.Flower;
 import com.ly.train.flower.web.spring.FlowerController;
-import com.ly.train.order.model.OrderExt;
+import com.ly.train.order.ext.model.OrderExt;
 import com.ly.train.web.service.OrderNoService;
 import com.ly.train.web.service.StartService;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 @RestController
 @RequestMapping("/order/")
@@ -55,7 +55,5 @@ public class CreateOrderController extends FlowerController {
     getServiceFlow().buildFlow(Arrays.asList("CreateOrderService", "CreateOrderExtService"), "EndService");
     getServiceFlow().build();
   }
-
-
 
 }

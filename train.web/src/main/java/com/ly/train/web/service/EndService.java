@@ -31,7 +31,7 @@ import com.ly.train.web.util.Response;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 @FlowerService(type = FlowerType.AGGREGATE)
 public class EndService extends AbstractService<List<Object>, Object> implements Flush, HttpComplete, Complete {
@@ -41,14 +41,9 @@ public class EndService extends AbstractService<List<Object>, Object> implements
   public Object doProcess(List<Object> message, ServiceContext context) throws Throwable {
     Response<List<Object>> res = R.ok(message);
     String ret = JSONObject.toJSONString(res, true);
-    context.getWeb().print(ret);
+    context.getWeb().printJSON(ret);
     logger.info("聚合服务收到消息：" + message);
     return message;
-  }
-
-  @Override
-  public void onError(Throwable throwable, List<Object> param) {
-    super.onError(throwable, param);
   }
 
 }

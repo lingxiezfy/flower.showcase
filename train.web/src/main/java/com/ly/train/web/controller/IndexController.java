@@ -22,7 +22,7 @@ import com.ly.train.web.util.Response;
 
 /**
  * @author leeyazhou
- *
+ * 
  */
 @RestController
 public class IndexController {
